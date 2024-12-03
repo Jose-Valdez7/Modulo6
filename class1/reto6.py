@@ -44,7 +44,13 @@ class auto:
     def comparar_kilometraje(auto1, auto2):
         return auto1.kilometraje == auto2.kilometraje
     
-
+    @classmethod
+    def auto_generico(cls):
+        return cls("Genérico", "Modelo Base", 2000)
+    
+    @staticmethod
+    def promedio_kilometraje(auto1, auto2):
+        return (auto1.kilometraje + auto2.kilometraje) / 2
     
 auto1 = auto.auto_nuevo("Ferrrari")
 auto2 = auto("Toyota", "Civic", 2017, 50000)
